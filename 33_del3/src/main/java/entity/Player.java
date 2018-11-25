@@ -1,13 +1,15 @@
 package java.entity;
+import java.util.Random;
 import java.util.Scanner;
 public class Player {
     private String name;
     private Account account;
     private int playerAmount;
+    private Player players;
     private int position;
+    private int playerList;
 
-
-    // getters for disse
+    int playerTurnCounter = 0;
 
     Account dogAccount;
     Account catAccount;
@@ -15,35 +17,54 @@ public class Player {
     Account shipAccount;
     Account xAccount;
 
-    Scanner scanner = new Scanner(System.in);
     // metode der vælger 2-4 spillere. skal evt bruge GUI for det.
-    public void amount(){
+    public void amount() {
 
-    }
+        Scanner scanner = new Scanner(System.in);
+
+        while (playerList >= 2 && playerList <= 4) {
+
+            System.out.println("Hvor mange spiller i?");
+
+            int players = scanner.nextInt();
+            if (players >= 2 && players <= 4) {
+                playerList = players;
 
 
-    // denne metode kaldes inden spillet starter. Afgør antal spillere og tildeler penge ud fra antal.
-    public void startScore(){
-        xAccount = shipAccount;
-        xAccount = carAccount;
-        xAccount = catAccount;
-        xAccount = dogAccount;
+            } else {
+                System.out.println("I skal være 2-4 spillere for at starte spillet");
 
-        if (playerAmount == 2){
-           xAccount.addToScore(20);
-        }
-        else if(playerAmount == 3){
-            xAccount.addToScore(18);
-        }
-        else if (playerAmount == 4){
-           xAccount.addToScore(16);
+            }
         }
     }
 
+    public void figures(){
+
+        Account player1 = dogAccount;
+        Account player2 = catAccount;
+        Account player3 = carAccount;
+        Account player4 = shipAccount;
+
+        }
+    //kan stå for sig selv
     public void movePlayer(int dice) {
         position = position + dice;
         if (position >= 21) {
             position = position - 21;
         }
+    }
+
+    /* Eks. Hvis vi har 2 spiller, modulerer vi 2 % 4 = 1. Derefter går den 1 op, fra den spiller der sidst havde tur,
+     * i dette tilfælde er det spiller 2, så 2+1 = 3.
+     */
+    public int playerTurn(){
+        int turn = playerTurnCounter % playerList;
+        playerTurnCounter++;
+        return turn;
+
+        /**
+         * Kilde: https://github.com/Niemeijeren/Matador/blob/master/Matador/src/Player.java
+         */
+
     }
 }
