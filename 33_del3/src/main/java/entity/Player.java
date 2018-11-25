@@ -49,8 +49,8 @@ public class Player {
     //kan stå for sig selv
     public void movePlayer(int dice) {
         position = position + dice;
-        if (position >= 21) {
-            position = position - 21;
+        if (position >= 24) {
+            position = position - 24;
         }
     }
 
