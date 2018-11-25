@@ -26,8 +26,8 @@ private Field[] fields;
         fields[19] = new Property(20,"Bowlinghallen",4,7);
         fields[20] = new Property(21,"Zoo",4,7);
         fields[21] = new Chance;
-        fields[22] = new Property(23,"Vandlandet",4,8);
-        fields[23] = new Property(24,"Strandpromenaden",4,8);
+        fields[22] = new Property(23,"Vandlandet",5,8);
+        fields[23] = new Property(24,"Strandpromenaden",5,8);
 
 
     }
