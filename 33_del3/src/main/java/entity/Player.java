@@ -47,8 +47,8 @@ public class Player {
 
         }
     //kan stå for sig selv
-    public void movePlayer(int dice) {
-        position = position + dice;
+    public void movePlayer(Dice eyes) {
+        position = position + geteyes; // parse til int?
         if (position >= 24) {
             position = position - 24;
         }
