@@ -2,11 +2,10 @@ package java.entity;
 public class GameBoard {
 private Field[] fields;
 
-// property felterne skal muligvis initialiseres med owner = null også? eller er den bare det automatisk?
     public void gameBoard() {
         Field[] fields = new Field[24];
-        fields[0] = new EmptyField(1,"Start",0);
-        fields[1] = new Property(2,"Burgerbaren",1,1);
+        fields[0] = new EmptyField(1,"Start",0);  //Startknap objekt dannes her udfra dennes klasse. kald dennes metode i samme indeks.
+        fields[1] = new Property(2,"Burgerbaren",1,1);// af den rigtige art. her udfyldes parametrene så metoden passer.
         fields[2] = new Property(3,"Pizzariaet",1,1);
         fields[3] = new Chance;// kald chancekortene her
         fields[4] = new Property(5,"Slikbutikken",1,2);
@@ -23,7 +22,7 @@ private Field[] fields;
         fields[15] = new Chance;
         fields[16] = new Property(17,"Legetøjsbutikken",3,6);
         fields[17] = new Property(18,"Dyrehandlen",3,6);
-        fields[18] = new Jail(19,"Gå direkte i fængsel",-1):
+        fields[18] = new Jail(19,"Gå direkte i fængsel",-1);
         fields[19] = new Property(20,"Bowlinghallen",4,7);
         fields[20] = new Property(21,"Zoo",4,7);
         fields[21] = new Chance;
