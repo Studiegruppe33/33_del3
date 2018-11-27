@@ -1,4 +1,4 @@
-package java.entity;
+package ent;
 
 public class Jail extends Field {
     public Jail(int number, String name, int result) {

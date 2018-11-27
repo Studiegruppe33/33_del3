@@ -1,4 +1,4 @@
-package java.entity;
+package ent;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -25,19 +25,26 @@ import java.util.Random;
 */
 
     public class ChanceCard {
-        Chance[] chanceDeck = new Chance[10];
 
+        Chance chance;
+        private int number;
+        Chance[] chanceDeck = new Chance[10];
+        public ChanceCard(int number){
+        this.number = number;
+        }
         public void deck() {
-            chanceDeck[0].chancecard1();
-            chanceDeck[1].chancecard2();
-            chanceDeck[2].chancecard3();
-            chanceDeck[3].chancecard4();
-            chanceDeck[4].chancecard5();
-            chanceDeck[5].chancecard6();
-            chanceDeck[6].chancecard7();
-            chanceDeck[7].chancecard8();
-            chanceDeck[8].chancecard9();
-            chanceDeck[9].chancecard10();
+            chanceDeck[0] = new Chance(1);
+            chanceDeck[1] = new Chance(2);
+            chanceDeck[2] = new Chance(3);
+            chanceDeck[3] = new Chance(4);
+            chanceDeck[4] = new Chance(5);
+            chanceDeck[5] = new Chance(6);
+            chanceDeck[6] = new Chance(7);
+            chanceDeck[7] = new Chance(8);
+            chanceDeck[8] = new Chance(9);
+            chanceDeck[9] = new Chance(10);
+
+
         }
 
         /* public Chance getChanceCard(){
@@ -55,14 +62,14 @@ import java.util.Random;
         }
 
             public void shufflecard(){
-            int pos;
+            int position;
             Chance deck;
             Random random = new Random();
-            for ( int i= chanceDeck.length-1;i>0;i--){
-                pos=random.nextInt(i+1);
-                deck=chanceDeck[pos];
-                chanceDeck[pos]=chanceDeck[i];
-                chanceDeck[i]=deck;
+            for ( int i = chanceDeck.length-1;i>0;i--){
+                position = random.nextInt(i+1);
+                deck=chanceDeck[position];
+                chanceDeck[position]=chanceDeck[i];
+                chanceDeck[i] = deck;
             }
 
         }

@@ -1,5 +1,4 @@
-package java.entity;
-import java.util.Random;
+package ent;
 import java.util.Scanner;
 public class Player {
     private String name;
@@ -11,7 +10,9 @@ public class Player {
 
 
 
+
     int playerTurnCounter = 0;
+
 
     Account dogAccount;
     Account catAccount;
@@ -52,9 +53,12 @@ public class Player {
     //kan stå for sig selv
     public void movePlayer() {
         position = position + dice.getEyes(); // parse til int?
-        if (position >= 24) {
-            position = position - 24;
+        if (position > 23) {
+            position = position - 23;
         }
+    }
+    public void setPosition (int boardNumber){
+        position = boardNumber;
     }
 
     /* Eks. Hvis vi har 2 spiller, modulerer vi 2 % 4 = 1. Derefter går den 1 op, fra den spiller der sidst havde tur,

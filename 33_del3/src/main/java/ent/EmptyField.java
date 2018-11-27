@@ -1,4 +1,4 @@
-package java.entity;
+package ent;
 
 public class EmptyField extends Field {
 

@@ -1,4 +1,4 @@
-package java.entity;
+package ent;
 
 public abstract class Field {
     private int number;
@@ -14,8 +14,7 @@ public abstract class Field {
 
     }
 // denne metode overwrites. hvordan uden fejl?
-    public void landOnField(){
-    }
+    public abstract void  landOnField();
 
     public int getNumber() {
         return number;

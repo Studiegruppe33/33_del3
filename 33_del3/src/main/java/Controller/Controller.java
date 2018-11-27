@@ -1,9 +1,9 @@
-package java.Controller;
+package Controller;
 
-import java.entity.Account;
-import java.entity.Player;
-import java.entity.Dice;
-import java.entity.Field;
+import ent.Account;
+import ent.Player;
+import ent.Dice;
+import ent.Field;
 
 public class Controller {
 
