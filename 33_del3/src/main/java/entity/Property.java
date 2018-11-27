@@ -22,8 +22,10 @@ public class Property extends Field {
         this.owner = owner;
     }
 
+
+    Account account; // vi har bare initialiseret et tilfældigt objekt her.
     @Override
-    public void landOnField(Account account) {
+    public void landOnField() {
 // hvis feltet er ledigt kaldes addfield metoden, der tildeler spilleren feltet og fratrækker værdien på kontoen
         if(owner == null) {
             account.addField(this);

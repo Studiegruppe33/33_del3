@@ -17,7 +17,7 @@ private Field[] fields;
         fields[9] = new Chance;
         fields[10] = new Property(11,"SkaterParken",2,4);
         fields[11] = new Property(12,"Swimmingpoolen",2,4);
-        fields[12] = new EmptyField(13,"Gratis parkering", 0)
+        fields[12] = new EmptyField(13,"Gratis parkering", 0);
         fields[13] = new Property(14,"Spillehallen",3,5);
         fields[14] = new Property(15,"Biografen",3,5);
         fields[15] = new Chance;

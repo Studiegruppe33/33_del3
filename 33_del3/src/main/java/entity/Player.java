@@ -46,9 +46,9 @@ public class Player {
         Account player4 = shipAccount;
 
         }
-    //kan stå for sig selv
-    public void movePlayer(Dice eyes) {
-        position = position + geteyes; // parse til int?
+    Dice dice; // hvilket objekt skal initialiseres for at udføre .getEyes her?
+    public void movePlayer() {
+        position = position + dice.getEyes();
         if (position >= 24) {
             position = position - 24;
         }
