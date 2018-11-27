@@ -13,14 +13,19 @@ public abstract class Field {
         this.result = result;
 
     }
-
-    public boolean isOwned() {
-        return owned;
-    }
-
+// denne metode overwrites. hvordan uden fejl?
     public void landOnField(){
-
     }
 
+    public int getNumber() {
+        return number;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getResult() {
+        return result;
+    }
 }
