@@ -1,6 +1,5 @@
 package java.entity;
 import java.util.Scanner;
-import java.entity.Dice;
 public class Player {
     private String name;
     private Account account;
@@ -8,6 +7,8 @@ public class Player {
     private Player players;
     private int position;
     private int playerList;
+
+
 
     int playerTurnCounter = 0;
 
