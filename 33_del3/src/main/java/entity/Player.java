@@ -9,6 +9,8 @@ public class Player {
     private int position;
     private int playerList;
 
+
+
     int playerTurnCounter = 0;
 
     Account dogAccount;
