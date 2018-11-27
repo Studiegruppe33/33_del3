@@ -46,9 +46,10 @@ public class Player {
         Account player4 = shipAccount;
 
         }
+        Dice dice;
     //kan stå for sig selv
-    public void movePlayer(Dice eyes) {
-        position = position + geteyes; // parse til int?
+    public void movePlayer() {
+        position = position + dice.getEyes(); // parse til int?
         if (position >= 24) {
             position = position - 24;
         }

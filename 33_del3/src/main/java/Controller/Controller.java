@@ -15,26 +15,26 @@ public class Controller {
     Field field;
 
 
-    public void startGame(){
+
+    public void startGame() {
 // bland chancekort metode kaldes først
-        while(account.getScore() != 0){
+        while (account.getScore() != 0) {
             player.amount();
             player.figures();
             player.movePlayer();
             field.landOnField();
 
 
-
-
             // hvilket objekt skal metoderne amount, figures etc starte på?
 
         }
         // metode der afgør hvem der vinder
+
         System.out.println("Du har tabt");
 
-
-
-
-
     }
+
+
+
+
 }
