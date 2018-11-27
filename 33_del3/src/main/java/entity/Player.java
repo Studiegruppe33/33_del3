@@ -1,6 +1,6 @@
 package java.entity;
-import java.util.Random;
 import java.util.Scanner;
+import java.entity.Dice;
 public class Player {
     private String name;
     private Account account;
@@ -48,7 +48,7 @@ public class Player {
         }
     //kan stå for sig selv
     public void movePlayer(Dice eyes) {
-        position = position + geteyes; // parse til int?
+        position = position + ; // parse til int?
         if (position >= 24) {
             position = position - 24;
         }
