@@ -10,7 +10,6 @@ import java.util.Random;
 
 public class ChanceCard {
 
-
     private  String[] chancecard;
 
     public void Chance() {
@@ -28,7 +27,7 @@ public class ChanceCard {
 
     }
 
-    public Field pullCard() {
+    public String pullCard() {
         String pullCard = chancecard[0];
         for (int i = 0; i < chancecard.length; i++) {
             chancecard[i] = chancecard[i + 1];

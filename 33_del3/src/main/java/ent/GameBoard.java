@@ -7,7 +7,7 @@ private Field[] fields;
         fields[0] = new EmptyField(1,"Start",0);
         fields[1] = new Property(2,"Burgerbaren",1,1);
         fields[2] = new Property(3,"Pizzariaet",1,1);
-        fields[3] = new ChanceCard().pullCard();// kald chancekortene her
+        fields[3] = new ChanceCard().pullCard()// kald chancekortene her
         fields[4] = new Property(5,"Slikbutikken",1,2);
         fields[5] = new Property(6,"Iskiosken",1,2);
         fields[6] = new EmptyField(7, "På besøg", 0);

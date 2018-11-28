@@ -7,6 +7,7 @@ public abstract class Chance extends Field {
         super(1, "chance", 1);
     }
 
+
     Scanner scanner = new Scanner(System.in);
     // dan objekter af hver chanceklasse og inddel dem i et array, som starter tilfældigt
     // herfra lægges øverste kort nederst i arrayet, så alle rykker en gang ned.
@@ -20,7 +21,8 @@ public abstract class Chance extends Field {
     }
 
     public void setChanceConsequence() {
-        this.chance = ChanceCard.pullCard();
+        ChanceCard card = new ChanceCard();
+        this.chance = card.pullCard();
     }
 
     public String getChanceConsequence() {
@@ -60,10 +62,11 @@ public abstract class Chance extends Field {
                         } else if (fieldChoice == 2) {
                             player.setPosition(11);
                         }
-                    }
-                        break;
+                    break;}
 
-                        case "Chance4":
+
+
+                case "Chance4":
                             System.out.println("Du har spist for meget slik. Betal M2 til banken");
                             account.addToScore(-2);
                             break;
@@ -80,8 +83,9 @@ public abstract class Chance extends Field {
                                 } else if (fieldChoice == 2) {
                                     player.setPosition(player.getPosition());
                                 }
-                            }
+                            break;}
                             break;
+
 
                         case "Chance6":
                             System.out.println("Gratis Felt!");
@@ -101,7 +105,7 @@ public abstract class Chance extends Field {
                                     player.setPosition(20);
                                 }
 
-                            }
+                            break;}
                             break;
 
                         case "Chance7":
@@ -160,7 +164,7 @@ public abstract class Chance extends Field {
             }
         }
     }
-}
+
 
 
 
