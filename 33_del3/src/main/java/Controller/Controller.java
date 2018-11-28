@@ -1,9 +1,6 @@
 package Controller;
 
-import ent.Account;
-import ent.Player;
-import ent.Dice;
-import ent.Field;
+import ent.*;
 
 public class Controller {
 
