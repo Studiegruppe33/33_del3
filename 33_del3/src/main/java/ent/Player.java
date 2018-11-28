@@ -57,6 +57,11 @@ public class Player {
             position = position - 23;
         }
     }
+
+    public int getPosition() {
+        return position;
+    }
+
     public void setPosition (int boardNumber){
         position = boardNumber;
     }
