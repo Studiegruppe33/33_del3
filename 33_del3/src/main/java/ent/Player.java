@@ -9,37 +9,37 @@ public class Player {
     private int playerList;
 
 
-
-
     int playerTurnCounter = 0;
 
 
-    Account dogAccount;
-    Account catAccount;
-    Account carAccount;
-    Account shipAccount;
-    Account xAccount;
+    Account dogAccount = new Account();
+    Account catAccount = new Account();
+    Account carAccount = new Account();
+    Account shipAccount = new Account();
+    Account xAccount = new Account();
+
 
     // metode der vælger 2-4 spillere. skal evt bruge GUI for det.
     public void amount() {
+        System.out.println("Hvor mange spiller i?");
 
         Scanner scanner = new Scanner(System.in);
 
         while (playerList >= 2 && playerList <= 4) {
 
-            System.out.println("Hvor mange spiller i?");
+        int players = scanner.nextInt();
+        if (players >= 2 && players <= 4) {
+            playerList = players;
+            System.out.println(" I er " + playerList);
 
-            int players = scanner.nextInt();
-            if (players >= 2 && players <= 4) {
-                playerList = players;
 
+        } else {
+            System.out.println("I skal være 2-4 spillere for at starte spillet");
 
-            } else {
-                System.out.println("I skal være 2-4 spillere for at starte spillet");
-
-            }
         }
     }
+
+}
 
     public void figures(){
 
@@ -50,7 +50,7 @@ public class Player {
 
         }
         Dice dice;
-    //kan stå for sig selv
+
     public void movePlayer() {
         position = position + dice.getEyes(); // parse til int?
         if (position > 23) {
@@ -78,5 +78,9 @@ public class Player {
          * Kilde: https://github.com/Niemeijeren/Matador/blob/master/Matador/src/Player.java
          */
 
+    }
+
+    public Account getxAccount() {
+        return xAccount;
     }
 }

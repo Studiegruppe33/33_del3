@@ -12,7 +12,7 @@ public class Account {
 
     // getters for disse
 
-    Account dogAccount;
+    Account dogAccount; // skal de initialiseres?
     Account catAccount;
     Account carAccount;
     Account shipAccount;

@@ -7,7 +7,7 @@ public class Jail extends Field {
 Account account;
     @Override
     public void landOnField() {
-       account.addToScore(-1);
+       account.getxAccount().addToScore(-1);
     }
 }
 
