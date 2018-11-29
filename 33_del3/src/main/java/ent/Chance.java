@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Chance extends Field {
-    int i;
 
     public Chance(int nummer, String name, int result) {
         super(nummer, name, result);
@@ -31,12 +30,12 @@ public class Chance extends Field {
     }
 
     public int pullCard() {
-        i = chancecard[0];
+        int j = chancecard[0];
         for (int i = 0; i < chancecard.length; i++) {
             chancecard[i] = chancecard[i + 1];
         }
-        chancecard[chancecard.length - 1] = i;
-        return i;
+        chancecard[chancecard.length - 1] = j;
+        return j;
     }
 
 
