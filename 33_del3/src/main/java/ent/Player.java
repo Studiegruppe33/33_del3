@@ -89,7 +89,7 @@ public class Player {
             carAccount.addToScore(18); catAccount.addToScore(18);
             dogAccount.addToScore(18); shipAccount.addToScore(18);
         } else if (playerAmount == 4) {
-            carAccount.setScore(20); catAccount.setScore(16);
+            carAccount.setScore(16); catAccount.setScore(16);
             dogAccount.setScore(16); shipAccount.setScore(16);
         }
         System.out.println(xAccount);

@@ -17,7 +17,7 @@ public class Controller {
         player.startScore();
 
         while (player.getDogAccount().getScore() != 0 || player.getCarAccount().getScore() != 0 ||
-                player.getCatAccount().getScore() != 0 || player.getShipAccount().getScore() != 0) {
+                player.getCatAccount().getScore() != 1 || player.getShipAccount().getScore() != 0) {
             player.playerTurn();
             dice.ThrowDice();
             player.movePlayer();
