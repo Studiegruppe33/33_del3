@@ -25,7 +25,7 @@ public class Player {
 
         Scanner scanner = new Scanner(System.in);
 
-        while (playerList >= 2 && playerList <= 4) {
+        while (players >= 2 && players <= 4) {
 
         int players = scanner.nextInt();
         if (players >= 2 && players <= 4) {
