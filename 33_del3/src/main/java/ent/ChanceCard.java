@@ -12,7 +12,7 @@ public class ChanceCard {
 
             int index=ran.nextInt(10)+1;
 
-            switch (3) {
+            switch (index) {
                 case 1:
                     System.out.println("Du har lavet alle dine lektier. Modtag 2 af banken");
                    account.addToScore(2);
