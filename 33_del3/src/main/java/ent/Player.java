@@ -22,7 +22,7 @@ public class Player {
 
         Scanner scanner = new Scanner(System.in);
 
-        while (playerList >= 2 && playerList <= 4) {
+        while (true) {
 
             System.out.println("Hvor mange spiller i?");
 
