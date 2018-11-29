@@ -12,7 +12,7 @@ public class ChanceCard {
 
             int index=ran.nextInt(10)+1;
 
-            switch (index) {
+            switch (3) {
                 case 1:
                     System.out.println("Du har lavet alle dine lektier. Modtag 2 af banken");
                    account.addToScore(2);
@@ -31,10 +31,11 @@ public class ChanceCard {
                         int fieldChoice = scanner.nextInt();
                         if (fieldChoice == 1) {
                            player.setPosition(10);
+                           break;
                         } else if (fieldChoice == 2) {
                             player.setPosition(11);
-                        }
-                        break;
+                        break;}
+
                     }
                 case 4:
                     System.out.println("Du har spist for meget slik. Betal M2 til banken");
@@ -50,12 +51,11 @@ public class ChanceCard {
                         if (fieldChoice == 1) {
                             player.setPosition(player.getPosition() + 1);
 
-                        } else if (fieldChoice == 2) {
+                        break;} else if (fieldChoice == 2) {
                            player.setPosition(player.getPosition());
-                        }
-                        break;
+                       break; }
+
                     }
-                    break;
 
 
                 case 6:
@@ -68,17 +68,17 @@ public class ChanceCard {
                         int fieldChoice = scanner.nextInt();
                         if (fieldChoice == 1) {
                             player.setPosition(10);
-                        } else if (fieldChoice == 2) {
+                        break;} else if (fieldChoice == 2) {
                             player.setPosition(11);
-                        } else if (fieldChoice == 3) {
+                        break;} else if (fieldChoice == 3) {
                             player.setPosition(19);
-                        } else if (fieldChoice == 4) {
+                        break;} else if (fieldChoice == 4) {
                             player.setPosition(20);
-                        }
+                        break;}
 
-                        break;
+
                     }
-                    break;
+
 
                 case 7:
                     System.out.println("Gratis Felt!");
@@ -90,18 +90,17 @@ public class ChanceCard {
                         int fieldChoice = scanner.nextInt();
                         if (fieldChoice == 1) {
                             player.setPosition(5);
-                        } else if (fieldChoice == 2) {
+                        break;} else if (fieldChoice == 2) {
                             player.setPosition(6);
-                        }
+                        break;}
 
-                        break;
+
                     }
-                    break;
+
 
                 case 8:
                     System.out.println("Ryk frem til Strandpromenaden");
                     player.setPosition(24);
-
                     break;
 
                 case 9:
@@ -114,17 +113,15 @@ public class ChanceCard {
                         int fieldChoice = scanner.nextInt();
                         if (fieldChoice == 1) {
                             player.setPosition(8);
-                        } else if (fieldChoice == 2) {
+                       break; } else if (fieldChoice == 2) {
                             player.setPosition(9);
-                        } else if (fieldChoice == 3) {
+                        break;} else if (fieldChoice == 3) {
                             player.setPosition(23);
-                        } else if (fieldChoice == 4) {
+                        break;} else if (fieldChoice == 4) {
                             player.setPosition(24);
-                        }
+                        break;}
 
-                        break;
                     }
-                    break;
 
 
                 case 10:
@@ -141,7 +138,7 @@ public class ChanceCard {
 
         @Override
         public String toString() {
-            return "";
+            return "\n";
         }
     }
 
