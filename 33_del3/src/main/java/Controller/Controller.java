@@ -14,6 +14,13 @@ public class Controller {
 
 
     public void startGame() {
+
+        ChanceCard chance= new ChanceCard();
+        chance.card();
+        System.out.println(chance);
+       /* GameBoard gameBoard=new GameBoard();
+        Player player = new Player();
+
 // bland chancekort metode kaldes først
         while (account.getScore() != 0) {
             player.amount();
@@ -28,7 +35,7 @@ public class Controller {
         // metode der afgør hvem der vinder
 
         System.out.println("Du har tabt");
-
+*/
     }
 
 

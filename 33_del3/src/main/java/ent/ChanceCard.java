@@ -1,46 +1,25 @@
 package ent;
-import java.util.Arrays;
+
 import java.util.Random;
 import java.util.Scanner;
 
-/*public class ChanceCard extends Chance{
-    public ChanceCard(int number, String name, int result, int card) {
-        super(number, name, result);
-        this.card = card;
-    }*/
-
 public class ChanceCard {
+   Account account;
+   Player player;
+        Scanner scanner = new Scanner(System.in);
+        public void card() {
+            Random ran = new Random();
 
+            int index=ran.nextInt(10)+1;
 
-    Scanner scanner = new Scanner(System.in);
-    // dan objekter af hver chanceklasse og inddel dem i et array, som starter tilfældigt
-    // herfra lægges øverste kort nederst i arrayet, så alle rykker en gang ned.
-
-    Account account;
-    Player player;
-    int chance;
-
-    public String toString() {
-        return "Du har landet på Chancen, tryk enter for at trække et kort.";
-    }
-
-
-
-    public void landOnField(Player player) {
-
-        int field;
-
-        boolean newCard = true;
-        while (newCard) {
-            newCard = false;
-            switch (chance) {
+            switch (index) {
                 case 1:
                     System.out.println("Du har lavet alle dine lektier. Modtag 2 af banken");
-                    account.addToScore(2);
+                   account.addToScore(2);
                     break;
                 case 2:
                     System.out.println("Ryk frem til start og modtag 2M!");
-                    player.setPosition(0);
+                   player.setPosition(0);
                     break;
                 case 3:
                     System.out.println("Gratis Felt!");
@@ -51,11 +30,12 @@ public class ChanceCard {
                         System.out.println("Tryk 1 eller 2");
                         int fieldChoice = scanner.nextInt();
                         if (fieldChoice == 1) {
-                            player.setPosition(10);
+                           player.setPosition(10);
                         } else if (fieldChoice == 2) {
                             player.setPosition(11);
                         }
-                        break;}
+                        break;
+                    }
                 case 4:
                     System.out.println("Du har spist for meget slik. Betal M2 til banken");
                     account.addToScore(-2);
@@ -71,9 +51,10 @@ public class ChanceCard {
                             player.setPosition(player.getPosition() + 1);
 
                         } else if (fieldChoice == 2) {
-                            player.setPosition(player.getPosition());
+                           player.setPosition(player.getPosition());
                         }
-                        break;}
+                        break;
+                    }
                     break;
 
 
@@ -95,7 +76,8 @@ public class ChanceCard {
                             player.setPosition(20);
                         }
 
-                        break;}
+                        break;
+                    }
                     break;
 
                 case 7:
@@ -112,7 +94,8 @@ public class ChanceCard {
                             player.setPosition(6);
                         }
 
-                        break;}
+                        break;
+                    }
                     break;
 
                 case 8:
@@ -139,8 +122,9 @@ public class ChanceCard {
                             player.setPosition(24);
                         }
 
-                        break;}
-
+                        break;
+                    }
+                    break;
 
 
                 case 10:
@@ -151,6 +135,13 @@ public class ChanceCard {
                 default:
                     break;
             }
+
+
+        }
+
+        @Override
+        public String toString() {
+            return "";
         }
     }
-}
+
