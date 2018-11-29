@@ -2,23 +2,24 @@ package ent;
 
 
 public abstract class Field {
-    private int number;
+    private int position;
     private String name;
     private int result;
     private boolean owned = false;
 
 
-    public Field(int number, String name, int result) {
-        this.number = number;
+    public Field(int position, String name, int result) {
+        this.position = position;
         this.name = name;
         this.result = result;
 
     }
-// denne metode overwrites. hvordan uden fejl?
+
     public abstract void  landOnField();
 
-    public int getNumber() {
-        return number;
+
+    public int getPosition() {
+        return position;
     }
 
     public String getName() {

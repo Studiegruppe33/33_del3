@@ -1,17 +1,12 @@
 package Controller;
 
 import ent.*;
-
+import java.util.Scanner;
 public class Controller {
-
-    // Sker det samme for denne account som for den account der kaldes i de andre metode
-    // der har en indflydelse på scoren? hvis ikke: hvordan gør vi det til den samme?
     Account account = new Account();
     Player player = new Player();
-    Dice dice;
+    Dice dice = new Dice();
     Field field;
-
-
 
     public void startGame() {
 
@@ -22,23 +17,24 @@ public class Controller {
         Player player = new Player();
 
 // bland chancekort metode kaldes først
-        while (account.getScore() != 0) {
-            player.amount();
-            player.figures();
+        Account dogAccount = new Account();
+
+        player.amount();
+
+        player.startScore();
+
+        while (player.getDogAccount().getScore() != 0 || player.getCarAccount().getScore() != 0 ||
+                player.getCatAccount().getScore() != 1 || player.getShipAccount().getScore() != 0) {
+            player.playerTurn();
+            dice.ThrowDice();
             player.movePlayer();
             field.landOnField();
-
-
-            // hvilket objekt skal metoderne amount, figures etc starte på?
 
         }
         // metode der afgør hvem der vinder
 
+
         System.out.println("Du har tabt");
 */
     }
-
-
-
-
 }

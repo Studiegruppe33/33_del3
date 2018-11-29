@@ -4,10 +4,10 @@ package ent;
 
 public class Property extends Field {
 
-    private int par;
-    private Player owner = null;
+    private int pair;
+    private Account owner = null;
 
-    public Player getOwner() {
+    public Account getOwner() {
         return owner;
     }
 
@@ -16,26 +16,28 @@ public class Property extends Field {
 
     }
 
-    public Property(int number, String name, int result, int par) {
+    public Property(int number, String name, int result, int pair) {
         super(number, name, result);
-        this.par = par;
+        this.pair = pair;
         this.owner = owner;
     }
 
 
-    Account account; // vi har bare initialiseret et tilfældigt objekt her.
+    Player player = new Player();
+    Account account = new Account();
     @Override
     public void landOnField() {
 // hvis feltet er ledigt kaldes addfield metoden, der tildeler spilleren feltet og fratrækker værdien på kontoen
         if(owner == null) {
-            account.addField(this);
+            player.getxAccount().addField(this);
+            player.getxAccount().addToScore(- getResult());
 
         } else {
-            System.out.println("Ejendommen tilhører" + owner.xAccount);
+            System.out.println("Ejendommen tilhører" + owner);
             //trækker resultat fra nuværende spillers konto
             account.setScore(account.getScore()-(getResult()));
             // lægger resultat til ejers konto.
-            owner.xAccount.setScore(account.getScore()+(getResult()));
+
         }
 // er ikke sikker på om scoren lægges til rigtige owner så test dette.
 

@@ -4,10 +4,12 @@ public class Jail extends Field {
     public Jail(int number, String name, int result) {
         super(number, name,result);
     }
-Account account;
+
+    Player player;
+
     @Override
     public void landOnField() {
-       account.addToScore(-1);
+       player.getxAccount().addToScore(-1);
     }
 }
 
