@@ -4,7 +4,7 @@ package ent;
 
 public class Property extends Field {
 
-    private int par;
+    private int pair;
     private Player owner = null;
 
     public Player getOwner() {
@@ -16,9 +16,9 @@ public class Property extends Field {
 
     }
 
-    public Property(int number, String name, int result, int par) {
+    public Property(int number, String name, int result, int pair) {
         super(number, name, result);
-        this.par = par;
+        this.pair = pair;
         this.owner = owner;
     }
 
