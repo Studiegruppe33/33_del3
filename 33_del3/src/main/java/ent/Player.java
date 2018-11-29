@@ -1,17 +1,14 @@
 package ent;
 import java.util.Scanner;
+
 public class Player {
+
     private String name;
     private Account account;
     private int playerAmount;
     private Player players;
     private int position;
     private int playerList;
-
-
-
-
-    int playerTurnCounter = 0;
 
 
     Account dogAccount;
@@ -70,6 +67,7 @@ public class Player {
      * i dette tilfælde er det spiller 2, så 2+1 = 3.
      */
     public int playerTurn(){
+        int playerTurnCounter = 0;
         int turn = playerTurnCounter % playerList;
         playerTurnCounter++;
         return turn;
