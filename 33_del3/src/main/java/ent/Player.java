@@ -9,7 +9,6 @@ public class Player {
     private int playerList;
 
 
-    int playerTurnCounter = 0;
 
     Account dogAccount = new Account();
     Account catAccount = new Account();
@@ -66,6 +65,7 @@ public class Player {
      * i dette tilfælde er det spiller 2, så 2+1 = 3.
      */
     public void playerTurn(){
+        int playerTurnCounter = 0;
         int turn = playerTurnCounter % playerList;
         playerTurnCounter++;
         switch (turn){
@@ -85,14 +85,15 @@ public class Player {
         if (playerList == 2) {
             carAccount.addToScore(20); catAccount.addToScore(20);
             dogAccount.addToScore(20); shipAccount.addToScore(20);
-        } else if (playerAmount == 3) {
+        } else if (playerList == 3) {
             carAccount.addToScore(18); catAccount.addToScore(18);
             dogAccount.addToScore(18); shipAccount.addToScore(18);
-        } else if (playerAmount == 4) {
+        } else if (playerList == 4) {
             carAccount.setScore(16); catAccount.setScore(16);
             dogAccount.setScore(16); shipAccount.setScore(16);
         }
-        System.out.println(xAccount);
+        System.out.println("Bil saldo: " + carAccount.getScore() + ", Kat saldo: " + catAccount.getScore()
+                + ", Hund saldo: " + dogAccount.getScore() + ", Skib saldo: " + shipAccount.getScore());
     }
 
     public Account getDogAccount() {
