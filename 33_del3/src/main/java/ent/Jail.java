@@ -5,11 +5,11 @@ public class Jail extends Field {
         super(number, name,result);
     }
 
-    Account account;
+    Player player;
 
     @Override
     public void landOnField() {
-       account.getxAccount().addToScore(-1);
+       player.getxAccount().addToScore(-1);
     }
 }
 
