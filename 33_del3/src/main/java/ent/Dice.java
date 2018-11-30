@@ -5,9 +5,10 @@ public class Dice {
     Random random = new Random();
     private int eyes;
 
-    public void ThrowDice(){
-        this.eyes = this.random.nextInt(6)+1;
 
+    public int ThrowDice(){
+        this.eyes = this.random.nextInt(6)+1;
+return eyes;
     }
 
     public int getEyes() {

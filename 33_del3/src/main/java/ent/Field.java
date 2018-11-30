@@ -1,8 +1,8 @@
 package ent;
 
 
-public abstract class Field {
-    private int position;
+public class Field {
+    private int position = 0;
     private String name;
     private int result;
     private boolean owned = false;
@@ -15,7 +15,8 @@ public abstract class Field {
 
     }
 
-    public abstract void  landOnField();
+    public void  landOnField(){
+    }
 
 
     public int getPosition() {

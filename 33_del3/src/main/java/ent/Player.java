@@ -7,7 +7,7 @@ public class Player {
     private Player players;
     private int position;
     private int playerList;
-
+    private int playerTurnCounter = 1;
 
 
     Account dogAccount = new Account();
@@ -20,8 +20,8 @@ public class Player {
 
 
 
-    // metode der vælger 2-4 spillere. skal evt bruge GUI for det.
-    public void amount() {
+    // metode der vælger 2-4 spillere. skal evt bruge GUI for det. hej
+    public int amount() {
         System.out.println("Hvor mange spiller i?");
 
         Scanner scanner = new Scanner(System.in);
@@ -38,18 +38,21 @@ public class Player {
             System.out.println("I skal være 2-4 spillere for at starte spillet");
 
         }
-    }
 
+    }
+return playerList;
 }
 
-        Dice dice;
+        Dice dice = new Dice();
+    GameBoard gameBoard = new GameBoard();
 
     public void movePlayer() {
-        if (position > 23) {
-            position = position - 23;
+        dice.ThrowDice();
+        System.out.println("Du slog " + dice.getEyes());
+        if (position + dice.getEyes() > 23) {
+            position += dice.getEyes() - 23;
         }else {
             position = position + dice.getEyes();
-
         }
     }
 
@@ -64,30 +67,41 @@ public class Player {
     /* Eks. Hvis vi har 2 spiller, modulerer vi 2 % 4 = 1. Derefter går den 1 op, fra den spiller der sidst havde tur,
      * i dette tilfælde er det spiller 2, så 2+1 = 3.
      */
-    public void playerTurn(){
-        int playerTurnCounter = 0;
+
+    public int playerTurn() {
+
         int turn = playerTurnCounter % playerList;
+
         playerTurnCounter++;
-        switch (turn){
-            case 1:
-                carAccount = xAccount;
-            case 2:
-                shipAccount = xAccount;
-            case 3:
-                dogAccount = xAccount;
-            case 4:
-                catAccount = xAccount;
+            switch (turn) {
+                case 1:
+                    carAccount = xAccount;
+                    System.out.println("Bilens tur");
+                    break;
+                case 2:
+                    shipAccount = xAccount;
+                    System.out.println("Skibets tur");
+                    break;
+                case 3:
+                    dogAccount = xAccount;
+                    System.out.println("Hundens tur");
+                    break;
+                case 4:
+                    catAccount = xAccount;
+                    System.out.println("Kattens tur");
+                    break;
+            }
+
+            return turn;
         }
 
-
-        }
     public void startScore() {
         if (playerList == 2) {
-            carAccount.addToScore(20); catAccount.addToScore(20);
-            dogAccount.addToScore(20); shipAccount.addToScore(20);
+            carAccount.setScore(0); catAccount.setScore(20);
+            dogAccount.setScore(20); shipAccount.setScore(0);
         } else if (playerList == 3) {
-            carAccount.addToScore(18); catAccount.addToScore(18);
-            dogAccount.addToScore(18); shipAccount.addToScore(18);
+            carAccount.setScore(18); catAccount.setScore(18);
+            dogAccount.setScore(18); shipAccount.setScore(18);
         } else if (playerList == 4) {
             carAccount.setScore(16); catAccount.setScore(16);
             dogAccount.setScore(16); shipAccount.setScore(16);
