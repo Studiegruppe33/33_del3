@@ -10,5 +10,4 @@ public class EmptyField extends Field {
     public void landOnField() {
         System.out.println(getName());
     }
-
 }

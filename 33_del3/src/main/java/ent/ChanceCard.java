@@ -34,7 +34,7 @@ public class ChanceCard {
                            break;
                         } else if (fieldChoice == 2) {
                             player.setPosition(11);
-                        break;}
+                        break;} // mangler at give spilleren feltet gratis såfremt det er frit.
 
                     }
                 case 4:
@@ -100,7 +100,7 @@ public class ChanceCard {
 
                 case 8:
                     System.out.println("Ryk frem til Strandpromenaden");
-                    player.setPosition(24);
+                    player.setPosition(23);
                     break;
 
                 case 9:

@@ -20,7 +20,7 @@ public class Player {
 
 
 
-    // metode der vælger 2-4 spillere. skal evt bruge GUI for det. hej
+    // metode der vælger 2-4 spillere
     public int amount() {
         System.out.println("Hvor mange spiller i?");
 
@@ -130,9 +130,7 @@ return playerList;
         return xAccount;
     }
 
-    /**
-         * Kilde: https://github.com/Niemeijeren/Matador/blob/master/Matador/src/Player.java
-         */
+
 
 
 }

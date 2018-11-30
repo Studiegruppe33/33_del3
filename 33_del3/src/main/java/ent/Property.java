@@ -35,12 +35,10 @@ public class Property extends Field {
         } else {
             System.out.println("Ejendommen tilhører" + owner);
             //trækker resultat fra nuværende spillers konto
-            account.setScore(account.getScore()-(getResult()));
-            // lægger resultat til ejers konto.
+            account.setScore(account.getScore() - (getResult()));
+            // skal lægge resultat til ejers konto.
 
         }
-// er ikke sikker på om scoren lægges til rigtige owner så test dette.
-
     }
 }
 
