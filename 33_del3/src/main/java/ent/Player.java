@@ -20,7 +20,7 @@ public class Player {
 
 
 
-    // metode der vælger 2-4 spillere. skal evt bruge GUI for det.
+    // metode der vælger 2-4 spillere. skal evt bruge GUI for det. hej
     public int amount() {
         System.out.println("Hvor mange spiller i?");
 
