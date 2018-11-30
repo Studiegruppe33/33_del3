@@ -15,7 +15,10 @@ class PlayerTest {
 
     @Test
     void playerTurn() {
-        assertEquals(4, StubPlayer.stubPlayerTurn());
+        assertEquals(4, StubPlayer.stubPlayerTurn4());
+        assertEquals(3, StubPlayer.stubPlayerTurn3());
+        assertEquals(2, StubPlayer.stubPlayerTurn2());
+        assertEquals(1, StubPlayer.stubPlayerTurn1());
     }
 
     @Test
