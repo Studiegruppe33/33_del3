@@ -7,7 +7,7 @@ public class Player {
     private Player players;
     private int position;
     private int playerList;
-    private int playerTurnCounter = 1;
+    private int playerTurnCounter = 0;
 
 
     Account dogAccount = new Account();
@@ -72,24 +72,30 @@ return playerList;
 
         int turn = playerTurnCounter % playerList;
 
-        playerTurnCounter++;
+
             switch (turn) {
-                case 1:
+                case 0:
                     carAccount = xAccount;
                     System.out.println("Bilens tur");
+                    playerTurnCounter++;
+                    break;
+                case 1:
+                    shipAccount = xAccount;
+                    System.out.println("Kattens tur");
+                    playerTurnCounter++;
                     break;
                 case 2:
-                    shipAccount = xAccount;
-                    System.out.println("Skibets tur");
-                    break;
-                case 3:
                     dogAccount = xAccount;
                     System.out.println("Hundens tur");
+                    playerTurnCounter++;
                     break;
-                case 4:
+                case 3:
                     catAccount = xAccount;
-                    System.out.println("Kattens tur");
+                    System.out.println("Skibets tur");
+                    playerTurnCounter++;
                     break;
+
+
             }
 
             return turn;
@@ -97,11 +103,11 @@ return playerList;
 
     public void startScore() {
         if (playerList == 2) {
-            carAccount.setScore(0); catAccount.setScore(20);
-            dogAccount.setScore(20); shipAccount.setScore(0);
+            carAccount.setScore(20); catAccount.setScore(20);
+            dogAccount.setScore(0); shipAccount.setScore(0);
         } else if (playerList == 3) {
             carAccount.setScore(18); catAccount.setScore(18);
-            dogAccount.setScore(18); shipAccount.setScore(18);
+            dogAccount.setScore(18); shipAccount.setScore(0);
         } else if (playerList == 4) {
             carAccount.setScore(16); catAccount.setScore(16);
             dogAccount.setScore(16); shipAccount.setScore(16);
