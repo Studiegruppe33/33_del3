@@ -29,7 +29,7 @@ public class Property extends Field {
     public void landOnField() {
 // hvis feltet er ledigt kaldes addfield metoden, der tildeler spilleren feltet og fratrækker værdien på kontoen
         if(owner == null) {
-            player.getxAccount().addField(this);
+            player..addField(this);
             player.getxAccount().addToScore(- getResult());
 
         } else {
