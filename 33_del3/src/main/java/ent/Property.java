@@ -24,18 +24,18 @@ public class Property extends Field {
 
 
     Player player = new Player();
-    Account account = new Account();
+
     @Override
     public void landOnField() {
 // hvis feltet er ledigt kaldes addfield metoden, der tildeler spilleren feltet og fratrækker værdien på kontoen
         if(owner == null) {
-            player.getxAccount().addField(this);
-            player.getxAccount().addToScore(- getResult());
+            player.currentAccount.addField(this);
+            player.currentAccount.addToScore(- getResult());
 
         } else {
             System.out.println("Ejendommen tilhører" + owner);
             //trækker resultat fra nuværende spillers konto
-            account.setScore(account.getScore() - (getResult()));
+            player.currentAccount.setScore(player.currentAccount.getScore() - (getResult()));
             // skal lægge resultat til ejers konto.
 
         }

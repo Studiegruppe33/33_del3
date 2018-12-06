@@ -14,7 +14,7 @@ public class Player {
     Account catAccount = new Account();
     Account carAccount = new Account();
     Account shipAccount = new Account();
-    Account xAccount = new Account();
+    Account currentAccount = new Account();
 
 
 
@@ -75,22 +75,22 @@ return playerList;
 
             switch (turn) {
                 case 0:
-                    carAccount = xAccount;
+                    currentAccount = carAccount;
                     System.out.println("Bilens tur");
                     playerTurnCounter++;
                     break;
                 case 1:
-                    shipAccount = xAccount;
+                    currentAccount = shipAccount;
                     System.out.println("Kattens tur");
                     playerTurnCounter++;
                     break;
                 case 2:
-                    dogAccount = xAccount;
+                    currentAccount = dogAccount;
                     System.out.println("Hundens tur");
                     playerTurnCounter++;
                     break;
                 case 3:
-                    catAccount = xAccount;
+                    currentAccount = carAccount;
                     System.out.println("Skibets tur");
                 playerTurnCounter=0;
 
@@ -104,10 +104,10 @@ return playerList;
     public void startScore() {
         if (playerList == 2) {
             carAccount.setScore(20); catAccount.setScore(20);
-            dogAccount.setScore(0); shipAccount.setScore(0);
+            dogAccount.setScore(20); shipAccount.setScore(20);
         } else if (playerList == 3) {
             carAccount.setScore(18); catAccount.setScore(18);
-            dogAccount.setScore(18); shipAccount.setScore(0);
+            dogAccount.setScore(18); shipAccount.setScore(18);
         } else if (playerList == 4) {
             carAccount.setScore(16); catAccount.setScore(16);
             dogAccount.setScore(16); shipAccount.setScore(16);
@@ -133,7 +133,7 @@ return playerList;
     }
 
     public Account getxAccount() {
-        return xAccount;
+        return currentAccount;
     }
 
 
