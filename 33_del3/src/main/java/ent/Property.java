@@ -16,8 +16,8 @@ public class Property extends Field {
 
     }
 
-    public Property(int number, String name, int result, int pair) {
-        super(number, name, result);
+    public Property(int position, String name, int result, int pair) {
+        super(position, name, result);
         this.pair = pair;
         this.owner = owner;
     }

@@ -4,11 +4,7 @@ import ent.*;
 
 import java.util.Scanner;
 public class Controller {
-    Account account = new Account();
     Player player = new Player();
-    // håber ikke parametre har indflydelse?
-    Field field = new Field(1,"none",0);
-
 
     Scanner scanner = new Scanner(System.in);
 
@@ -25,7 +21,10 @@ public class Controller {
             System.out.println("Kast terningen");
             player.movePlayer();
             scanner.nextLine();
-            field.landOnField();
+            switch("landon"){
+                case emptyfield
+                    emptyfield.landOnField
+            }
 
 
 

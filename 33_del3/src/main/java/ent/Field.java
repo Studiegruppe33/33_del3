@@ -1,11 +1,12 @@
 package ent;
 
 
-public class Field {
-    private int position = 0;
+public abstract class Field {
+    private int position;
     private String name;
     private int result;
     private boolean owned = false;
+
 
 
     public Field(int position, String name, int result) {
@@ -15,7 +16,7 @@ public class Field {
 
     }
 
-    public void  landOnField(){
+    public void landOnField(){
     }
 
 

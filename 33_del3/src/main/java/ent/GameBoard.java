@@ -1,4 +1,7 @@
 package ent;
+
+import org.graalvm.compiler.core.common.Fields;
+
 public class GameBoard {
 private Field[] fields;
 
@@ -28,5 +31,8 @@ private Field[] fields;
         fields[21] = new Chance(22,"Chance",0);
         fields[22] = new Property(23,"Vandlandet",5,8);
         fields[23] = new Property(24,"Strandpromenaden",5,8);
+    }
+    public Field[] getFields() {
+        return fields;
     }
 }

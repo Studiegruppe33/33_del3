@@ -1,8 +1,8 @@
 package ent;
 
 public class Jail extends Field {
-    public Jail(int number, String name, int result) {
-        super(number, name,result);
+    public Jail(int position, String name, int result) {
+        super(, name,result);
     }
 
     Player player;

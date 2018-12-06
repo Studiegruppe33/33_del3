@@ -1,8 +1,8 @@
 package ent;
 
 public class Chance extends Field{
-    public Chance(int number, String name, int result) {
-        super(number, name, result);
+    public Chance(int position, String name, int result) {
+        super(position, name, result);
     }
 
     @Override

@@ -47,17 +47,17 @@ return playerList;
     GameBoard gameBoard = new GameBoard();
 
     public void movePlayer() {
+        GameBoard g = new GameBoard();
         dice.ThrowDice();
         System.out.println("Du slog " + dice.getEyes());
-        if (position + dice.getEyes() > 23) {
+        if (g.getFields[getPosition()] + dice.getEyes() > 23) {
             position += dice.getEyes() - 23;
         }else {
             position = position + dice.getEyes();
         }
     }
 
-    public int getPosition() {
-        return position;
+
     }
 
     public void setPosition (int boardNumber){
