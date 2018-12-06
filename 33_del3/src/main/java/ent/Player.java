@@ -92,8 +92,8 @@ return playerList;
                 case 3:
                     catAccount = xAccount;
                     System.out.println("Skibets tur");
-                    playerTurnCounter++;
-                    break;
+                playerTurnCounter=0;
+
 
 
             }

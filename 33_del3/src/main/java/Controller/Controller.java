@@ -19,7 +19,7 @@ public class Controller {
 
         player.startScore();
         while (player.getCarAccount().getScore() != 0 || player.getCatAccount().getScore() != 0 ||
-                player.getShipAccount().getScore() != 0 || player.getDogAccount().getScore() != 0) {
+                player.getShipAccount().getScore() != 0 || player.getDogAccount().getScore() == 0) {
 
             player.playerTurn();
             System.out.println("Kast terningen");
