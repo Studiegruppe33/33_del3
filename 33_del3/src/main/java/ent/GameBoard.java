@@ -1,11 +1,11 @@
 package ent;
 
-import org.graalvm.compiler.core.common.Fields;
 
 public class GameBoard {
-private Field[] fields;
+    private Field[] fields;
 
     public void gameBoard() {
+        //Opretter array på 24 index, der alle har de samme parameter: position, name og result.
         Field[] fields = new Field[24];
         fields[0] = new EmptyField(1,"Start",0);
         fields[1] = new Property(2,"Burgerbaren",1,1);

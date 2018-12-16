@@ -1,9 +1,10 @@
 package ent;
 
-
+//Nedarver fra field
 
 public class Property extends Field {
 
+//Property særlige og unikke variabler
     private int pair;
     private Account owner = null;
 
@@ -15,7 +16,7 @@ public class Property extends Field {
         this.owner = owner;
 
     }
-
+//Konstruktøren med variabler fra super klassen og dens egne
     public Property(int position, String name, int result, int pair) {
         super(position, name, result);
         this.pair = pair;

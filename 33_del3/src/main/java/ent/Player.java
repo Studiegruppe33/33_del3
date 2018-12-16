@@ -1,6 +1,7 @@
 package ent;
 import java.util.Scanner;
 public class Player {
+    //States:
     private String name;
     private Account account;
     private int playerAmount;
@@ -9,7 +10,7 @@ public class Player {
     private int playerList;
     private int playerTurnCounter = 0;
 
-
+    //Objekter
     Account dogAccount = new Account();
     Account catAccount = new Account();
     Account carAccount = new Account();
@@ -26,42 +27,52 @@ public class Player {
 
         Scanner scanner = new Scanner(System.in);
 
-        while (true) {
+//Man indtaster hvor mange spiller man er
         int players = scanner.nextInt();
+
+        //While true sørger for at spiller bliver ved med at kører efter man har valgt antal spiller.
+        while(true) {
+
         if (players >= 2 && players <= 4) {
             playerList = players;
-            System.out.println(" I er " + playerList + " spillere.");
+            System.out.println("I er " + playerList + " spillere.");
             break;
 
 
         } else {
             System.out.println("I skal være 2-4 spillere for at starte spillet");
+            break;
 
         }
 
     }
 return playerList;
 }
-
-        Dice dice = new Dice();
+//Intialisere nye objektet fra andre klasser
+    Dice dice = new Dice();
     GameBoard gameBoard = new GameBoard();
 
-    public void movePlayer() {
-        GameBoard g = new GameBoard();
+    // movePLayer har parameteren position
+    public int movePlayer(int position) {
+        //Spilleren kaster terningen
         dice.ThrowDice();
         System.out.println("Du slog " + dice.getEyes());
-        if (g.getFields[getPosition()] + dice.getEyes() > 23) {
+        //Spillerens position ændres med det terningen har slået, så han rykker det antal felter frem.
+        // hvis spilleren er nået til det sidste felt, rykker han fra felt 0 istedet.
+        if (position + dice.getEyes() > 23) {
             position += dice.getEyes() - 23;
         }else {
             position = position + dice.getEyes();
-        }
+        }  return position;
     }
 
 
-    }
-
+//Setter og getter
     public void setPosition (int boardNumber){
         position = boardNumber;
+    }
+    public int getPosition (){
+        return position;
     }
 
     /* Eks. Hvis vi har 2 spiller, modulerer vi 2 % 4 = 1. Derefter går den 1 op, fra den spiller der sidst havde tur,
@@ -76,7 +87,7 @@ return playerList;
             switch (turn) {
                 case 0:
                     currentAccount = carAccount;
-                    System.out.println("Bilens tur");
+                    System.out.println("\nBilens tur");
                     playerTurnCounter++;
                     break;
                 case 1:
@@ -100,7 +111,7 @@ return playerList;
 
             return turn;
         }
-
+//Sætter spillerens startscore. I vores metode, kan man se alle 4 mulige player score, selvom man kun er 2 personer
     public void startScore() {
         if (playerList == 2) {
             carAccount.setScore(20); catAccount.setScore(20);
@@ -112,8 +123,8 @@ return playerList;
             carAccount.setScore(16); catAccount.setScore(16);
             dogAccount.setScore(16); shipAccount.setScore(16);
         }
-        System.out.println("Bil saldo: " + carAccount.getScore() + ", Kat saldo: " + catAccount.getScore()
-                + ", Hund saldo: " + dogAccount.getScore() + ", Skib saldo: " + shipAccount.getScore());
+        System.out.println("\nBil saldo: " + carAccount.getScore() + "\nKat saldo: " + catAccount.getScore()
+                + "\nHund saldo: " + dogAccount.getScore() + "\nSkib saldo: " + shipAccount.getScore());
     }
 
     public Account getDogAccount() {
@@ -140,3 +151,4 @@ return playerList;
 
 
 }
+

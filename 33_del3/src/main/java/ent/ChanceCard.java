@@ -7,11 +7,15 @@ public class ChanceCard {
    Account account;
    Player player;
         Scanner scanner = new Scanner(System.in);
+
         public void card() {
+            //metoder for at trække et kort. Inden man trækker bliver bunken blandet hver gang.
             Random ran = new Random();
 
             int index=ran.nextInt(10)+1;
 
+
+            //Chancekortnes metoder beskrevet i switch case
             switch (index) {
                 case 1:
                     System.out.println("Du har lavet alle dine lektier. Modtag 2 af banken");
